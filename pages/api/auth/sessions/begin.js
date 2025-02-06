@@ -34,8 +34,8 @@ export default async function handler(req, res) {
     await sendgrid.send({
       to: email,
       from: `${process.env.SENDGRID_NAME} <${process.env.SENDGRID_EMAIL}>`,
-      replyTo: "summit@hackclub.com",
-      subject: `Leaders Summit Login Code: ${loginCode}`,
+      replyTo: "scrapyard@hackclub.com",
+      subject: `Scrapyard Login Code: ${loginCode}`,
       ...loginCodeEmail(loginCode, name)
     });
   } catch (err) {

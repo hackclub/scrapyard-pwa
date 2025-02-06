@@ -24,7 +24,7 @@ export default function Dashboard({ user }) {
         <>
           <h1 className="mb2">Welcome, {user.fields.first_name}!</h1>
           
-          <p className="h3">You're all set for The Summit! Save this ticket & have it ready at the door.</p>
+          <p className="h3">You're all set for Scrapyard! Save this ticket & have it ready at the door.</p>
 
           <Ticket user={user} />
 

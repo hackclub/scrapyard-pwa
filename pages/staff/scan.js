@@ -34,7 +34,7 @@ function DotDotDot () {
 }
 
 const successMessages = [
-  "Welcome to the Summit",
+  "Welcome to Scrapyard",
   "You are checked in",
   "Welcome"
 ];
@@ -261,7 +261,7 @@ export default function Scan() {
       }} onClick={() => {
         location.reload();
       }}>
-        <p className="cook">Hack Club Leaders Summit</p>
+        <p className="cook">Hack Club Scrapyard</p>
         <small>Click Here to Reload Ticketing Terminal</small>
       </div>
     </>

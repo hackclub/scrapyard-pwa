@@ -6,7 +6,7 @@ export default function Build ({ style }) {
 
     return (
         <span style={style || {}}>
-            Hack Club Leaders Summit • {sha == false ? "Development" : (
+            Hack Club Scrapyard • {sha == false ? "Development" : (
                 <>Build <code>{sha}</code></>
             )}
         </span>

@@ -23,7 +23,7 @@ export default function Login({ pageName, children, limitedAnimations = false, r
       })}
     >
       <Head>
-        <title>{pageName} – Hack Club Leaders Summit</title>
+        <title>{pageName} – Hack Club Scrapyard</title>
       </Head>
       <div style={{
         position: 'absolute',
@@ -53,7 +53,7 @@ export default function Login({ pageName, children, limitedAnimations = false, r
           src="https://cloud-fn8ydpafc-hack-club-bot.vercel.app/0flag-standalone-bw__2__1.svg"
         />
         <h2 {...$[cook]({display: ["none", "block"]})}>
-          Leaders Summit
+          Scrapyard
         </h2>
         <div style={{flexGrow: 1}} /> 
         {/* <Link href="/dashboard" style={{ textDecoration: 'none'}}>

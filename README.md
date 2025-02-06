@@ -1,4 +1,4 @@
-# Summit PWA
+# Scrapyard PWA
 
 This is a Next.js web app that: collects additional information from participants, generates tickets, and has a schedule for participants to reference.
 
@@ -25,4 +25,4 @@ vercel env pull --environment=production
 vercel env pull --environment=development
 ```
 
-If you don't have access to Hack Club's Vercel, we've pinned the development environment variables in the `#summit-app` channel on Slack. Put these in the `.env.local` file.
+If you don't have access to Hack Club's Vercel, we've pinned the development environment variables in the `#scrapyard-app` channel on Slack. Put these in the `.env.local` file.

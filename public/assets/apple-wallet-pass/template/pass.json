@@ -1,11 +1,11 @@
 {
   "backgroundColor": "rgb(180,46,30)",
   "foregroundColor": "rgb(255,236,150)",
-  "logoText": "The Summit",
+  "logoText": "Scrapyard",
   "organizationName": "Hack Club",
   "passTypeIdentifier": "pass.zip.hackathon.development",
   "teamIdentifier": "zip.hackathon",
-  "description": "Event ticket for The Summit",
+  "description": "Event ticket for Scrapyard",
   "formatVersion": 1,
   "eventTicket": {
     "auxiliaryFields": [
@@ -54,9 +54,9 @@
       },
       {
         "key": "website",
-        "value": "summit.hackclub.com",
+        "value": "scrapyard.hackclub.com",
         "label": "Website",
-        "attributedValue": "https://summit.hackclub.com"
+        "attributedValue": "https://scrapyard.hackclub.com"
       }
     ]
   }

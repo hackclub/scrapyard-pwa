@@ -52,7 +52,7 @@ export default function Ticket ({ user }) {
             backgroundSize: 'cover',
           }}>
             <div className="flex" style={{alignItems: 'center', gap: '32px'}}>
-              <h1 className={"cook"}>Leaders Summit</h1>
+              <h1 className={"cook"}>Scrapyard</h1>
               <span className={"space"} style={{fontWeight: '500', fontSize: '1.7em'}}>{data._ticketNumber}</span>
             </div>
             <div className="flex" style={{flexDirection: 'column'}}>

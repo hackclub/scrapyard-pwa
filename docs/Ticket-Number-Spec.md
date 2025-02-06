@@ -1,6 +1,6 @@
 # Ticket Numbers
 
-The primary identifier behind tickets for The Summit are ticket numbers. These ticket numbers are 13-digit numbers generated based on the following format:
+The primary identifier behind tickets for Scrapyard are ticket numbers. These ticket numbers are 13-digit numbers generated based on the following format:
 
 ```
 12 - Hash of the attendee's name

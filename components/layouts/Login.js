@@ -15,7 +15,7 @@ export default function Login({ pageName, children, limitedAnimations = false, o
       })}
     >
       <Head>
-        <title>{pageName} – Hack Club Leaders Summit</title>
+        <title>{pageName} – Hack Club Scrapyard</title>
       </Head>
       <section
         {...$({
@@ -82,7 +82,7 @@ export default function Login({ pageName, children, limitedAnimations = false, o
               })
             })}
           >
-            {staff ? "Summit Organizers" : "Leaders Summit"}
+            {staff ? "Scrapyard Organizers" : "Scrapyard"}
           </h1>
         </div>
       </aside>
