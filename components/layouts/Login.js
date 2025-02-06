@@ -41,7 +41,7 @@ export default function Login({ pageName, children, limitedAnimations = false, o
           justifyContent: "start",
           alignItems: "center",
           height: "100vh",
-          background: `url("https://cloud-7ppjvjso3-hack-club-bot.vercel.app/0frame.svg")`,
+          // background: `url("https://cloud-7ppjvjso3-hack-club-bot.vercel.app/0frame.svg")`,
           backgroundPosition: "bottom",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain"
@@ -69,7 +69,7 @@ export default function Login({ pageName, children, limitedAnimations = false, o
               })
               
             })}
-            src={staff ? "https://icons.hackclub.com/api/icons/0xffec96/clubs-fill" : "https://cloud-fn8ydpafc-hack-club-bot.vercel.app/0flag-standalone-bw__2__1.svg"}
+            src={staff ? "https://icons.hackclub.com/api/icons/0x337D78/clubs-fill" : "https://assets.hackclub.com/flag-standalone.svg"}
             onClick={onFlagClick}
           />
           <h1

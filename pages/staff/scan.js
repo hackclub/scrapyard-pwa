@@ -191,7 +191,7 @@ export default function Scan() {
             flexGrow: 1,
             gap: "1rem",
           }}>
-            <h1>Welcome, leader!</h1>
+            <h1>Welcome, hacker!</h1>
             <h2 className="mb3">Align your ticket's QR code to check in.</h2>
           </div>
         </div>
@@ -213,7 +213,7 @@ export default function Scan() {
             overflow: "hidden",
             borderRadius: "24px"
           }}>
-            <img src="https://icons.hackclub.com/api/icons/0xffec96/announcement" />
+            <img src="https://icons.hackclub.com/api/icons/0x337D78/announcement" />
           </div>
           <div style={{
             display: "flex",

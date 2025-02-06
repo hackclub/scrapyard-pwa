@@ -46,7 +46,7 @@ export default function LoginPage() {
               }
             })}
           >
-            Summit Team
+            Scrapyard Team
           </h1>
 
           <p

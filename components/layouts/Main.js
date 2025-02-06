@@ -50,47 +50,47 @@ export default function Login({ pageName, children, limitedAnimations = false, r
           {...$({
             height: '32px'
           })}
-          src="https://cloud-fn8ydpafc-hack-club-bot.vercel.app/0flag-standalone-bw__2__1.svg"
+          src="https://assets.hackclub.com/flag-standalone.svg"
         />
         <h2 {...$[cook]({display: ["none", "block"]})}>
           Scrapyard
         </h2>
         <div style={{flexGrow: 1}} /> 
         {/* <Link href="/dashboard" style={{ textDecoration: 'none'}}>
-          <h3 {...$({color: 'white', textDecoration: 'none'})}>
+          <h3 {...$({color: '#337D78', textDecoration: 'none'})}>
             <span {...$({display: ["none", "inline-block"]})}>Your</span> Ticket
           </h3>
         </Link>
         <Link href="/schedule" style={{ textDecoration: 'none'}}>
-          <h3 {...$({color: 'white', textDecoration: 'none'})}>
+          <h3 {...$({color: '#337D78', textDecoration: 'none'})}>
             Schedule
           </h3>
         </Link>
         <Link href="/photos" style={{ textDecoration: 'none'}}>
-          <h3 {...$({color: 'white', textDecoration: 'none'})}>
+          <h3 {...$({color: '#337D78', textDecoration: 'none'})}>
             <span {...$({display: ["none", "inline-block"]})}>Photo & Video</span> Album
           </h3>
         </Link> */}
         <Link href="/dashboard" style={{ textDecoration: 'none'}}>
-          <h3 {...$({color: 'white', textDecoration: 'none'})}>
+          <h3 {...$({color: '#337D78', textDecoration: 'none'})}>
             Dashboard
           </h3>
         </Link>
         <Link href="/schedule" style={{ textDecoration: 'none'}}>
-          <h3 {...$({color: 'white', textDecoration: 'none'})}>
+          <h3 {...$({color: '#337D78', textDecoration: 'none'})}>
             Schedule
           </h3>
         </Link>
         <a
           href="/"
-          {...$({ color: 'white', textDecoration: 'none' })}
+          {...$({ color: '#337D78', textDecoration: 'none' })}
           onClick={async (e) => {
             e.preventDefault();
             await api.auth.sessions.destroy.post();
             router.push("/");
           }}
         >
-          <h3 {...$({color: 'white', textDecoration: 'none'})}>
+          <h3 {...$({color: '#337D78', textDecoration: 'none'})}>
             Sign Out
           </h3>
         </a>

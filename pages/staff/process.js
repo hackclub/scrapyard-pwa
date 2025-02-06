@@ -101,7 +101,7 @@ export default function Dashboard({ admin }) {
                   height: "min-content"
                 }}>
                   <h3 className="mt0 mb0">T-Shirt Size</h3>
-                  <h3 className="mt0 mb0">{fields["t-shirt"]}</h3>
+                  <h3 className="mt0 mb0">{fields["T-Shirt Size"]}</h3>
                   <h3 className="mt0 mb0">Travel</h3>
                   <h3 className="mt0 mb0">{fields.transportation} from {fields.travelingFrom}</h3>
                   <h3 className="mt0 mb0">Already Checked In?</h3>
@@ -123,7 +123,7 @@ export default function Dashboard({ admin }) {
                     alignItems: 'center',
                     gap: '1rem'
                   }} className="h2 mb0 mt0">
-                    <img style={{ height: "56px" }} src={`https://icons.hackclub.com/api/icons/0xffec96/${ticketed ? "checkmark" : "important"}`} />
+                    <img style={{ height: "56px" }} src={`https://icons.hackclub.com/api/icons/0x337D78/${ticketed ? "checkmark" : "important"}`} />
                     <span>
                       Status: {ticketed ? "Checked In" : "Scanned"}
                     </span>

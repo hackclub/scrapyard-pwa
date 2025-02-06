@@ -77,11 +77,11 @@ export default function Ticket ({ user }) {
               </div>
               <div className="flex" style={{flexDirection: 'column'}}>
                 <span>T-Shirt</span>
-                <span style={{fontSize: '1.4em'}}>{data['t-shirt']}</span>
+                <span style={{fontSize: '1.4em'}}>{data['T-Shirt Size']}</span>
               </div>
               <div className="flex" style={{flexDirection: 'column'}}>
                 <span>Travel</span>
-                <span style={{fontSize: '1.4em'}}>{data.transportation[0]}</span>
+                <span style={{fontSize: '1.4em'}}>{"NULL" || data.transportation[0]}</span>
               </div>
               <div className="flex" style={{flexDirection: 'column'}}>
                 <span>Dietary Restrictions</span>
@@ -99,7 +99,7 @@ export default function Ticket ({ user }) {
           }}>
             <span style={{fontSize: '1.7em'}}>{data.first_name} {data.last_name}</span>
             <div className="flex mt1 mb2" style={{ alignItems: 'center', gap: "26px" }}>
-              <img src={`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(`https://hack.af/${data._ticketNumber}`)}&ecc=M&color=b42d1d&bgcolor=ffec96&format=svg`} height="120px" />
+              <img src={`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(`https://hack.af/${data._ticketNumber}`)}&ecc=M&color=ffffff&bgcolor=337D78&format=svg`} height="120px" />
               <img src="https://cloud-8vbegsy8w-hack-club-bot.vercel.app/0plane_1.png" height="50px" />
             </div>
             <div className="flex" style={{alignItems: 'center', gap: '8px'}}>
@@ -108,7 +108,7 @@ export default function Ticket ({ user }) {
               </div>
               <div style={{flexGrow: '1', height: '0.5px', border: '0.5px solid var(--red)'}} />
               <div>
-                {data['t-shirt']}
+                {data['T-Shirt Size']}
               </div>
             </div>
             <div className="flex" style={{alignItems: 'center', gap: '8px'}}>
@@ -126,7 +126,7 @@ export default function Ticket ({ user }) {
               </div>
               <div style={{flexGrow: '1', height: '0.5px', border: '0.5px solid var(--red)'}} />
               <div>
-              {data.transportation[0]}
+              {"NULL" || data.transportation[0]}
               </div>
             </div>
             <div className="flex" style={{alignItems: 'center', gap: '8px'}}>
