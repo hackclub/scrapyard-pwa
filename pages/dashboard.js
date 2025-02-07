@@ -10,7 +10,7 @@ import Input from "@/components/Input";
 import Link from "next/link";
 import Ticket from "@/components/Ticket";
 import { generateTicket } from "./api/attendee/generateTicket";
-
+// import Button from '@/components/Button'
 export default function Dashboard({ user }) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -28,9 +28,30 @@ export default function Dashboard({ user }) {
 
           <Ticket user={user} />
 
-          <Link href={`/api/passes/${user.fields.ticketing_passId}/pass.pkpass`} prefetch={false}>
-            <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/add-to-apple-wallet-logo.png" style={{height: "64px"}} alt="Add to Apple Wallet" />
+          <div style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "start",
+            justifyContent: "start",
+            gap: "16px",
+          }}>
+
+          <Link href={`/api/passes/${user.fields.ticketing_passId}/pass.pkpass`} prefetch={false} style={{
+            height: "64px"
+          }}>
+            <img src="https://cloud-6odn6t3fq-hack-club-bot.vercel.app/0us-uk_add_to_apple_wallet_rgb_101421.svg" style={{height: "64px"}} alt="Add to Apple Wallet" />
           </Link>
+          <a href={"https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" + encodeURIComponent("https://hack.af/" + user.fields.ticketing_ticketNumber) + "&ecc=M&color=000000&bgcolor=ffffff&qzone=2&format=png"} download={"Scrapyard Ticket " + user.fields.ticketing_ticketNumber + ".png"} target="_blank">
+
+          <button style={{
+            height: "62px",
+            borderRadius: "12px",
+            color: "white"
+          }}>Download Ticket</button>
+
+          </a>
+
+          </div>
         </>
       :
         <>

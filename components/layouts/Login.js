@@ -15,7 +15,7 @@ export default function Login({ pageName, children, limitedAnimations = false, o
       })}
     >
       <Head>
-        <title>{pageName} – Hack Club Scrapyard</title>
+        <title>{pageName + " – Hack Club Scrapyard"}</title>
       </Head>
       <section
         {...$({

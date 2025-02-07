@@ -4,7 +4,7 @@ import theme from "./style";
 
 export default () => (
   <Head>
-    <title>Schedule – Scrapyard</title>
+    <title>{"Schedule" + " – Hack Club Scrapyard"}</title>
     <link href="https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap" rel="stylesheet" />
     {/* <style children={`body{background:${cx('darker')};}`} /> */}
     <style

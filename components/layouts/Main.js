@@ -23,7 +23,7 @@ export default function Login({ pageName, children, limitedAnimations = false, r
       })}
     >
       <Head>
-        <title>{pageName} – Hack Club Scrapyard</title>
+      <title>{pageName + " – Hack Club Scrapyard"}</title>
       </Head>
       <div style={{
         position: 'absolute',

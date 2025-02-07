@@ -87,7 +87,9 @@ p {
 
 :root {
   --red: #ffffff;
+  --white: #ffffff;
   --tan: #337D78;
+  --green: #337D78;
 }
 
 div.debug,

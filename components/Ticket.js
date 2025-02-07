@@ -10,6 +10,22 @@ function Cutout ({ side }) {
     }} />
   )
 }
+export function PreloadTicket ({ user }) {
+  const data = new Proxy(user.fields, {
+    get: (target, prop) => {
+      const newProp = prop.startsWith("_") ? "ticketing" + prop : prop;
+      console.log(target, newProp);
+      return target[newProp];
+    }
+  });
+  return (
+    <div style={{ width: "1px", height: "1px", opacity: 0, overflow: "hidden" }}>
+        <img src={`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(`https://hack.af/${data._ticketNumber}`)}&ecc=M&color=ffffff&bgcolor=337D78&format=svg`} height="120px" />
+              <img src="https://scrapyard.hackclub.com/favicon.png" height="50px" />
+
+    </div>
+  );
+}
 
 export default function Ticket ({ user }) {
   const data = new Proxy(user.fields, {
@@ -48,7 +64,7 @@ export default function Ticket ({ user }) {
             padding: '64px 48px',
             paddingTop: '48px',
             paddingRight: '16px',
-            backgroundImage: 'url(https://cloud-456eompb3-hack-club-bot.vercel.app/0big_ticket.png)',
+            // backgroundImage: 'url(https://cloud-456eompb3-hack-club-bot.vercel.app/0big_ticket.png)',
             backgroundSize: 'cover',
           }}>
             <div className="flex" style={{alignItems: 'center', gap: '32px'}}>
@@ -100,7 +116,7 @@ export default function Ticket ({ user }) {
             <span style={{fontSize: '1.7em'}}>{data.first_name} {data.last_name}</span>
             <div className="flex mt1 mb2" style={{ alignItems: 'center', gap: "26px" }}>
               <img src={`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(`https://hack.af/${data._ticketNumber}`)}&ecc=M&color=ffffff&bgcolor=337D78&format=svg`} height="120px" />
-              <img src="https://cloud-8vbegsy8w-hack-club-bot.vercel.app/0plane_1.png" height="50px" />
+              <img src="https://scrapyard.hackclub.com/favicon.png" height="50px" />
             </div>
             <div className="flex" style={{alignItems: 'center', gap: '8px'}}>
               <div>

@@ -30,6 +30,27 @@ export default function Dashboard({ admin }) {
         break;
     }
   }
+  const checkIn = async ticketNumber => {
+    try {
+      const success = await api.irl.checkIn.post({ ticketNumber });
+      if (!success) throw "Failure: Check-in failed";
+    } catch (err) {
+      console.error(err);
+      return await api.irl.transmit.post({
+        name: 'staff:checkin.failure',
+        data: {
+          ticketNumber: ticketNumber
+        }
+      });
+    }
+    await api.irl.transmit.post({
+      name: 'staff:checkin.success',
+      data: {
+        ticketNumber: ticketNumber,
+      }
+    });
+    setCheckedIn(c => [...c, ticketNumber]);
+  }
 
   useEffect(() => {
     if (!window.acked) window.acked = [];
@@ -129,7 +150,7 @@ export default function Dashboard({ admin }) {
                     </span>
                   </h3>
                   {/* <pre>{JSON.stringify(attendees[scan.ticketNumber], null, 4)}</pre> */}
-                  <button disabled aria-disabled onClick={() => checkIn(scan.ticketNumber)}>{ticketed ? "Checked In" : "Check In"}</button>
+                  <button onClick={() => checkIn(scan.ticketNumber)}>{ticketed ? "Checked In" : "Check In"}</button>
                 </div>
               </div>
             </div>
