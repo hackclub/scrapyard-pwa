@@ -11,6 +11,6 @@ export default async function handler (req, res) {
 
 export async function generateTicket(user){
   const number = await ticketNumber(user.fields.first_name + " " + user.fields.last_name, user.fields.email);
-  await updateAttendeeById(user.id, {"ticketing_ticketNumber": +number});
+  await updateAttendeeById(user.id, {"ticketing_ticketNumber": `${+number}`});
   return true
 }
