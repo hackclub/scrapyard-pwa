@@ -53,6 +53,19 @@ export default function Dashboard({ user }) {
                 alt="Add to Apple Wallet"
               />
             </Link>
+            <Link
+              href={`/api/passes/${user.fields.ticketing_passId}/googlePass`}
+              prefetch={false}
+              style={{
+                height: "64px"
+              }}
+            >
+              <img
+                src="https://cdn.hack.pet/slackcdn/4808041688b9937f7d3f022201eb9d78.png"
+                style={{ height: "64px" }}
+                alt="Add to Google Wallet"
+              />
+            </Link>
             <a
               href={
                 "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" +
