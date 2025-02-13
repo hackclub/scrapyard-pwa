@@ -14,7 +14,11 @@ export default async function handler(req, res) {
 
     const user = await session.currentUser();
 
-    return res.json({ authorized, ticketGenerated: user.fields.ticketing_ticketNumber && authorized, ...session });
+    return res.json({
+      authorized,
+      ticketGenerated: user.fields.ticketing_ticketNumber && authorized,
+      ...session
+    });
   } catch (err) {
     console.error(err);
     return res.json({ authorized: false });

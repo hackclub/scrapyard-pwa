@@ -23,19 +23,23 @@ export default function LoginPage() {
         admin: true
       });
       if (!registered) router.push("/login/register");
-      else router.push("/login"); 
+      else router.push("/login");
     } catch (err) {
       console.error(err);
-      alert("There was error logging in. Please report this error in #summit-app.");
+      alert(
+        "There was error logging in. Please report this error in #summit-app."
+      );
     }
-  }
+  };
 
   return (
     <Login pageName="Login" staff>
-      <div style={{
-        maxWidth: "100%"
-      }}>
-        <form onSubmit={e => e.preventDefault()}>
+      <div
+        style={{
+          maxWidth: "100%"
+        }}
+      >
+        <form onSubmit={(e) => e.preventDefault()}>
           <h1
             {...$({
               marginBottom: "16px",
@@ -59,14 +63,21 @@ export default function LoginPage() {
               }
             })}
           >
-            Sign in as an organizer to check-in attendees, manage the event, and more. If you're not an organizer or you don't know how you got here, <Link href="/" style={{ color: "var(--red)" }}>click here</Link> to sign in as an attendee.
+            Sign in as an organizer to check-in attendees, manage the event, and
+            more. If you're not an organizer or you don't know how you got here,{" "}
+            <Link href="/" style={{ color: "var(--red)" }}>
+              click here
+            </Link>{" "}
+            to sign in as an attendee.
           </p>
 
-          <Build style={{
-            position: 'absolute',
-            bottom: '0px',
-            right: '0px',
-          }} />
+          <Build
+            style={{
+              position: "absolute",
+              bottom: "0px",
+              right: "0px"
+            }}
+          />
 
           <div
             {...$({
@@ -139,7 +150,10 @@ export default function LoginPage() {
               />
               <a
                 href="/login"
-                {...$({ textDecoration: "none", cursor: loading ? "default" : "pointer" })}
+                {...$({
+                  textDecoration: "none",
+                  cursor: loading ? "default" : "pointer"
+                })}
                 onClick={async (e) => {
                   e.preventDefault();
                   await login();
@@ -152,8 +166,8 @@ export default function LoginPage() {
                     textDecoration: "none",
                     color: "var(--tan)",
                     fontSize: loading ? "1.8rem" : "2rem",
-                    display: 'flex',
-                    alignItems: 'center'
+                    display: "flex",
+                    alignItems: "center"
                   })}
                 >
                   {loading ? "⌛" : "→"}
@@ -167,18 +181,18 @@ export default function LoginPage() {
   );
 }
 
-export const getServerSideProps = async ({req, res}) => {
+export const getServerSideProps = async ({ req, res }) => {
   const session = await Session.from(req, res);
 
-  if (session.authorized && await session.currentUser()) {
+  if (session.authorized && (await session.currentUser())) {
     return {
       redirect: {
-        destination: '/organizers',
-        permanent: false,
-      },
-    }
+        destination: "/organizers",
+        permanent: false
+      }
+    };
   }
   return {
-    props: {},
-  }
-}
+    props: {}
+  };
+};

@@ -5,7 +5,7 @@ import Main from "@/components/layouts/Main";
 import useDevMode from "@/utils/useDevMode";
 import Schedule from "@/components/schedule/Schedule";
 
-export default function Dashboard({  }) {
+export default function Dashboard({}) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const dev = useDevMode();
@@ -17,7 +17,7 @@ export default function Dashboard({  }) {
   );
 }
 
-export const getServerSideProps = async ({req, res}) => {
+export const getServerSideProps = async ({ req, res }) => {
   const session = await Session.from(req, res);
 
   if (!session.authorized) {
@@ -25,14 +25,14 @@ export const getServerSideProps = async ({req, res}) => {
       props: {
         user: null
       }
-    }
+    };
   }
 
   // const user = await session.currentUser();
-  
+
   return {
     props: {
       // user
     }
-  }
-}
+  };
+};

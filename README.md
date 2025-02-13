@@ -4,10 +4,10 @@ This is a Next.js web app that: collects additional information from participant
 
 Here's the tech it uses:
 
-* Next.js
-* Airtable (where we store all the information about attendees!)
-* Vercel KV (storing session data)
-* Fillout (form software used for collecting additional information)
+- Next.js
+- Airtable (where we store all the information about attendees!)
+- Vercel KV (storing session data)
+- Fillout (form software used for collecting additional information)
 
 ## Development
 

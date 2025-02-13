@@ -23,7 +23,7 @@ const themeUtils = {
 };
 
 function fn(styles = {}) {
-  const responsive = useBreakpoints();;
+  const responsive = useBreakpoints();
   // @ts-ignore
   let { classes } = this;
   classes = [...classes];
@@ -64,7 +64,7 @@ function fn(styles = {}) {
 
   return {
     className: classes.join(" "),
-    style: objectMap(styles, style => {
+    style: objectMap(styles, (style) => {
       if (style instanceof Array) return responsive(...style);
       return style;
     })

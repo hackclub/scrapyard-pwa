@@ -11,7 +11,10 @@ export default function Document() {
         <link rel="apple-touch-startup-image" href="/assets/apple.png" />
         <meta name="apple-mobile-web-app-title" content="Summit" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
       </Head>
       <body style={{ margin: "0px!important" }}>
         <Main />

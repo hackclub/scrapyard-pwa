@@ -1,5 +1,5 @@
 import { findAttendeeById } from "@/lib/airtable";
-import sendgrid, { loginCodeEmail }  from "@/lib/email";
+import sendgrid, { loginCodeEmail } from "@/lib/email";
 import Session from "@/lib/sessions";
 import { setCookie, getCookie } from "cookies-next";
 
@@ -13,7 +13,7 @@ export default async function handler(req, res) {
   setCookie("session", session.id, { req, res, maxAge: oneWeek });
 
   const loginCode = await session.generateLoginCode();
-  
+
   await session.loginWithCode(loginCode);
 
   return res.redirect("/");

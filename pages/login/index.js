@@ -17,14 +17,17 @@ export default function LoginPage() {
     if (loading) return;
     setLoading(true);
 
-    const { authorized, ticketGenerated, admin } = await api.auth.sessions.authorize.post({
-      loginCode
-    });
+    const { authorized, ticketGenerated, admin } =
+      await api.auth.sessions.authorize.post({
+        loginCode
+      });
 
     if (!authorized) {
       setLoading(false);
       setLoginCode("");
-      return alert("🧙‍♀️ What sort of witchcraft is this? That's an invalid login code!");
+      return alert(
+        "🧙‍♀️ What sort of witchcraft is this? That's an invalid login code!"
+      );
     }
 
     if (admin) return router.push("/staff");
@@ -34,7 +37,7 @@ export default function LoginPage() {
     }
 
     router.push("/dashboard");
-  }
+  };
 
   return (
     <Login pageName="Login" limitedAnimations={true}>
@@ -60,10 +63,17 @@ export default function LoginPage() {
           }
         })}
       >
-        We sent a login code to your email. It expires in 15 minutes. Didn't get it? <Link href="/" {...$({
-          textDecoration: "underline",
-          color: "var(--red)"
-        })}>Try again.</Link>
+        We sent a login code to your email. It expires in 15 minutes. Didn't get
+        it?{" "}
+        <Link
+          href="/"
+          {...$({
+            textDecoration: "underline",
+            color: "var(--red)"
+          })}
+        >
+          Try again.
+        </Link>
       </p>
       <div
         {...$({
@@ -118,7 +128,10 @@ export default function LoginPage() {
               `
             }}
           />
-          <span className={"space"} style={{ display: 'none' }}>Login</span> {/* font loader */}
+          <span className={"space"} style={{ display: "none" }}>
+            Login
+          </span>{" "}
+          {/* font loader */}
           <input
             {...$.inputFocus({
               padding: "8px",
@@ -141,14 +154,28 @@ export default function LoginPage() {
             placeholder="Login Code"
             value={loginCode}
             disabled={loading}
-            onChange={(e) => setLoginCode(e.target.value.toUpperCase().split("").filter(e => "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".split('').includes(e)).join("").substring(0, 6))}
+            onChange={(e) =>
+              setLoginCode(
+                e.target.value
+                  .toUpperCase()
+                  .split("")
+                  .filter((e) =>
+                    "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".split("").includes(e)
+                  )
+                  .join("")
+                  .substring(0, 6)
+              )
+            }
             onKeyUp={(e) => {
               if (e.key === "Enter") login();
             }}
           />
           <a
             href="/login"
-            {...$({ textDecoration: "none", cursor: loading ? "default" : "pointer" })}
+            {...$({
+              textDecoration: "none",
+              cursor: loading ? "default" : "pointer"
+            })}
             onClick={async (e) => {
               e.preventDefault();
               await login();
@@ -161,8 +188,8 @@ export default function LoginPage() {
                 textDecoration: "none",
                 color: "var(--tan)",
                 fontSize: loading ? "1.8rem" : "2rem",
-                display: 'flex',
-                alignItems: 'center'
+                display: "flex",
+                alignItems: "center"
               })}
             >
               {loading ? "⌛" : "→"}
@@ -174,18 +201,18 @@ export default function LoginPage() {
   );
 }
 
-export const getServerSideProps = async ({req, res}) => {
+export const getServerSideProps = async ({ req, res }) => {
   const session = await Session.from(req, res);
 
-  if (session.authorized && await session.currentUser()) {
+  if (session.authorized && (await session.currentUser())) {
     return {
       redirect: {
-        destination: '/dashboard',
-        permanent: false,
-      },
-    }
+        destination: "/dashboard",
+        permanent: false
+      }
+    };
   }
   return {
-    props: {},
-  }
-}
+    props: {}
+  };
+};

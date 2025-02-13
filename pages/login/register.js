@@ -29,9 +29,8 @@ export default function Register() {
           }
         })}
       >
-        It looks like this email hasn't registered for the Scrapyard yet.
-        You can register to join us,
-        or you could try a different email address.
+        It looks like this email hasn't registered for the Scrapyard yet. You
+        can register to join us, or you could try a different email address.
       </p>
 
       <div

@@ -1,9 +1,9 @@
 // Copied from https://github.com/hackclub/site/blob/cf7f30039de68c3a473b8dd5b191ce6d4386ca74/src/components/Modal.js
 
-import React from 'react'
-import styled, { keyframes } from 'styled-components'
-import { Container, Box, Icon } from '@hackclub/design-system'
-import theme from './style'
+import React from "react";
+import styled, { keyframes } from "styled-components";
+import { Container, Box, Icon } from "@hackclub/design-system";
+import theme from "./style";
 
 const modalKeyframes = keyframes`
   0% {
@@ -15,7 +15,7 @@ const modalKeyframes = keyframes`
   100% {
     transform: translate(-50%, -50%) scale(1);
   }
-`
+`;
 
 const Overlay = styled(Box)`
   z-index: 1024;
@@ -26,12 +26,14 @@ const Overlay = styled(Box)`
   left: 0;
   width: 100%;
   height: 100%;
-`
+`;
 
-const ModalContainer = styled(Container).attrs({ bg: 'white' })`
+const ModalContainer = styled(Container).attrs({ bg: "white" })`
   border-radius: ${theme.radii[2]};
   padding: ${theme.space[3]}px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0625), 0 16px 32px rgba(0, 0, 0, 0.125) !important;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.0625),
+    0 16px 32px rgba(0, 0, 0, 0.125) !important;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -42,7 +44,7 @@ const ModalContainer = styled(Container).attrs({ bg: 'white' })`
     animation: ${modalKeyframes} ease-in 0.25s;
   }
   // Responsive size control
-  width: ${props => props.w || props.width || '36rem'};
+  width: ${(props) => props.w || props.width || "36rem"};
   max-width: 95vw;
   max-height: 95vh;
   margin: 0 auto;
@@ -53,10 +55,10 @@ const ModalContainer = styled(Container).attrs({ bg: 'white' })`
     top: 0;
     right: 0;
   }
-`
+`;
 
-const ButtonReset = styled(Box.withComponent('button')).attrs({
-  role: 'button',
+const ButtonReset = styled(Box.withComponent("button")).attrs({
+  role: "button",
   p: 3
 })`
   appearance: none;
@@ -64,13 +66,13 @@ const ButtonReset = styled(Box.withComponent('button')).attrs({
   border: 0;
   border-radius: ${theme.pill};
   cursor: pointer;
-`
+`;
 
-const CloseButton = props => (
+const CloseButton = (props) => (
   <ButtonReset aria-label="Close" color={theme.colors.muted} {...props}>
     <Icon glyph="view-close-small" size={24} />
   </ButtonReset>
-)
+);
 
 export default ({ children, toggle }) => (
   <>
@@ -80,4 +82,4 @@ export default ({ children, toggle }) => (
     </ModalContainer>
     <Overlay onClick={toggle} />
   </>
-)
+);

@@ -34,5 +34,8 @@
     "react-qr-reader": "^3.0.0-beta-1",
     "styled-components": "^6.1.8",
     "uuidv4": "^6.2.13"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.0"
   }
 }

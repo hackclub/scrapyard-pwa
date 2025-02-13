@@ -1,4 +1,3 @@
-
 function checksum(number) {
   const digits = (number + "").split("");
 

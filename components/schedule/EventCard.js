@@ -78,7 +78,7 @@ const toSpecialTime = (hhmmap) => {
 };
 
 const components = {
-  p: Text,
+  p: Text
 };
 
 class EventCard extends Component {

@@ -2,7 +2,13 @@ import $ from "@/utils/animation";
 import Head from "next/head";
 import useBreakpoints from "@/utils/useBreakpoints";
 
-export default function Login({ pageName, children, limitedAnimations = false, onFlagClick, staff }) {
+export default function Login({
+  pageName,
+  children,
+  limitedAnimations = false,
+  onFlagClick,
+  staff
+}) {
   return (
     <main
       {...$["akaya"]({
@@ -61,25 +67,32 @@ export default function Login({ pageName, children, limitedAnimations = false, o
           <img
             {...$({
               maxWidth: "min(30vw, 180px)",
-              ...(limitedAnimations ? {} : {
-                animate$fadeIn: {
-                  args: ["fromBottom"],
-                  delay: "0.5s"
-                }
-              })
-              
+              ...(limitedAnimations
+                ? {}
+                : {
+                    animate$fadeIn: {
+                      args: ["fromBottom"],
+                      delay: "0.5s"
+                    }
+                  })
             })}
-            src={staff ? "https://icons.hackclub.com/api/icons/0x337D78/clubs-fill" : "https://assets.hackclub.com/flag-standalone.svg"}
+            src={
+              staff
+                ? "https://icons.hackclub.com/api/icons/0x337D78/clubs-fill"
+                : "https://assets.hackclub.com/flag-standalone.svg"
+            }
             onClick={onFlagClick}
           />
           <h1
             {...$["cook"]({
-              ...(limitedAnimations ? {} : {
-                animate$fadeIn: {
-                  args: ["fromBottom"],
-                  delay: "1s"
-                }
-              })
+              ...(limitedAnimations
+                ? {}
+                : {
+                    animate$fadeIn: {
+                      args: ["fromBottom"],
+                      delay: "1s"
+                    }
+                  })
             })}
           >
             {staff ? "Scrapyard Organizers" : "Scrapyard"}

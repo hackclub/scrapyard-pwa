@@ -76,7 +76,7 @@ const Li = styled.li`
 
 const ChunkLabel = styled(Text.span).attrs({
   color: theme.colors.muted,
-  fontSize: 1,
+  fontSize: 1
 })`
   display: inline-block;
   vertical-align: sub;
@@ -125,7 +125,7 @@ const lengthOfDay = [
   "9:00 pm",
   "10:00 pm",
   "11:00 pm",
-  "12:00 am",
+  "12:00 am"
 ];
 
 export default ({ schedule = data }) => (

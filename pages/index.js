@@ -25,19 +25,23 @@ export default function LoginPage() {
         email
       });
       if (!registered) router.push("/login/register");
-      else router.push("/login"); 
+      else router.push("/login");
     } catch (err) {
       console.error(err);
-      alert("There was error logging in. Please report this error in #summit-app.");
+      alert(
+        "There was error logging in. Please report this error in #summit-app."
+      );
     }
-  }
+  };
 
   return (
     <Login pageName="Login">
-      <div style={{
-        maxWidth: "100%"
-      }}>
-        <form onSubmit={e => e.preventDefault()}>
+      <div
+        style={{
+          maxWidth: "100%"
+        }}
+      >
+        <form onSubmit={(e) => e.preventDefault()}>
           <h1
             {...$({
               marginBottom: "16px",
@@ -65,11 +69,13 @@ export default function LoginPage() {
             workshops, and more!
           </p>
 
-          <Build style={{
-            position: 'absolute',
-            bottom: '0px',
-            right: '0px',
-          }} />
+          <Build
+            style={{
+              position: "absolute",
+              bottom: "0px",
+              right: "0px"
+            }}
+          />
 
           <div
             {...$({
@@ -142,7 +148,10 @@ export default function LoginPage() {
               />
               <a
                 href="/login"
-                {...$({ textDecoration: "none", cursor: loading ? "default" : "pointer" })}
+                {...$({
+                  textDecoration: "none",
+                  cursor: loading ? "default" : "pointer"
+                })}
                 onClick={async (e) => {
                   e.preventDefault();
                   await login();
@@ -155,8 +164,8 @@ export default function LoginPage() {
                     textDecoration: "none",
                     color: "var(--tan)",
                     fontSize: loading ? "1.8rem" : "2rem",
-                    display: 'flex',
-                    alignItems: 'center'
+                    display: "flex",
+                    alignItems: "center"
                   })}
                 >
                   {loading ? "⌛" : "→"}
@@ -170,18 +179,18 @@ export default function LoginPage() {
   );
 }
 
-export const getServerSideProps = async ({req, res}) => {
+export const getServerSideProps = async ({ req, res }) => {
   const session = await Session.from(req, res);
 
-  if (session.authorized && await session.currentUser()) {
+  if (session.authorized && (await session.currentUser())) {
     return {
       redirect: {
-        destination: '/dashboard',
-        permanent: false,
-      },
-    }
+        destination: "/dashboard",
+        permanent: false
+      }
+    };
   }
   return {
-    props: {},
-  }
-}
+    props: {}
+  };
+};
