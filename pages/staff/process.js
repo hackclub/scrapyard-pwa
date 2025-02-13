@@ -161,7 +161,7 @@ export default function Dashboard({ admin }) {
                   <h3 className="mt0 mb0">{fields["T-Shirt Size"]}</h3>
                   <h3 className="mt0 mb0">Travel</h3>
                   <h3 className="mt0 mb0">
-                    {fields.transportation} from {fields.travelingFrom}
+                    {fields.transportMethod} from {fields.travelingFrom}
                   </h3>
                   <h3 className="mt0 mb0">Already Checked In?</h3>
                   <h3 className="mt0 mb0">

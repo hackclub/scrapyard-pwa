@@ -88,7 +88,7 @@ export default function Dashboard({ user }) {
           <p className="h3 mb3">
             Once it's been signed, it may take a bit for your ticket to be
             generated. Can't find the email in your inbox? Please email{" "}
-            <a href="mailto:jasper@hackclub.com">jasper@hackclub.com</a>.
+            <a href="mailto:deven@hackclub.com">deven@hackclub.com</a>.
           </p>
           <img
             src="https://raw.githubusercontent.com/hackclub/dinosaurs/main/dinosaur_sealing_letters_with_wax.png"

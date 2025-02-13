@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   const attendee = await findAttendeeById(req.query.id);
   if (!attendee) return res.json({ registered: false });
 
-  const session = await Session.create(attendee.fields.email, "leader", true);
+  const session = await Session.create(attendee.fields.email, "attendee", true);
   setCookie("session", session.id, { req, res, maxAge: oneWeek });
 
   const loginCode = await session.generateLoginCode();

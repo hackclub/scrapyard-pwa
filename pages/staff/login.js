@@ -27,7 +27,7 @@ export default function LoginPage() {
     } catch (err) {
       console.error(err);
       alert(
-        "There was error logging in. Please report this error in #summit-app."
+        "There was error logging in. Please report this error in #scrapyard."
       );
     }
   };

@@ -26,7 +26,7 @@ export default async function handler(req, res) {
 
   const session = await Session.create(
     email,
-    req.body.admin ? "organizer" : "leader"
+    req.body.admin ? "organizer" : "attendee"
   );
   setCookie("session", session.id, { req, res, maxAge: oneWeek });
 

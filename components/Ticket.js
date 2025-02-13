@@ -124,17 +124,15 @@ export default function Ticket({ user }) {
               >
                 <div className="flex" style={{ flexDirection: "column" }}>
                   <span>Starts at</span>
-                  <span style={{ fontSize: "1.4em" }}>18:00 02/09</span>
+                  <span style={{ fontSize: "1.4em" }}>12:00 03/01</span>
                 </div>
                 <div className="flex" style={{ flexDirection: "column" }}>
                   <span>Ends at</span>
-                  <span style={{ fontSize: "1.4em" }}>18:00 02/11</span>
+                  <span style={{ fontSize: "1.4em" }}>15:00 03/02</span>
                 </div>
                 <div className="flex" style={{ flexDirection: "column" }}>
                   <span>Venue</span>
-                  <span style={{ fontSize: "1.4em" }}>
-                    The Light House (SF)
-                  </span>
+                  <span style={{ fontSize: "1.4em" }}>FUTO (Austin)</span>
                 </div>
                 <div className="flex" style={{ flexDirection: "column" }}>
                   <span>T-Shirt</span>
@@ -145,7 +143,7 @@ export default function Ticket({ user }) {
                 <div className="flex" style={{ flexDirection: "column" }}>
                   <span>Travel</span>
                   <span style={{ fontSize: "1.4em" }}>
-                    {"NULL" || data.transportation[0]}
+                    {"Magic" || data.transportMethod}
                   </span>
                 </div>
                 <div className="flex" style={{ flexDirection: "column" }}>
@@ -223,7 +221,7 @@ export default function Ticket({ user }) {
                     border: "0.5px solid var(--red)"
                   }}
                 />
-                <div>{"NULL" || data.transportation[0]}</div>
+                <div>{"Magic" || data.transportMethod}</div>
               </div>
               <div
                 className="flex"

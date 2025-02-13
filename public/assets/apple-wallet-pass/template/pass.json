@@ -11,9 +11,9 @@
     "auxiliaryFields": [
       {
         "key": "venue",
-        "value": "The Light House",
+        "value": "FUTO",
         "label": "venue",
-        "attributedValue": "http://maps.apple.com/?address=651+Dolores+St,+San Francisco,+CA+94110",
+        "attributedValue": "http://maps.apple.com/?address=1044+Liberty+Park+Dr,+Austin,+TX+78746",
         "changeMessage": "Venue changed to %@"
       }
     ],
@@ -40,14 +40,14 @@
     "backFields": [
       {
         "key": "app",
-        "value": "st.hack.af",
+        "value": "sy.hack.af",
         "label": "Manage your ticket",
-        "attributedValue": "https://st.hack.af"
+        "attributedValue": "https://sy.hack.af"
       },
       {
         "key": "location",
-        "value": "651 Dolores St, San Francisco, CA 94110",
-        "attributedValue": "http://maps.apple.com/?address=651+Dolores+St,+San Francisco,+CA+94110",
+        "value": "1044 Liberty Park Dr, Austin, TX 78746",
+        "attributedValue": "http://maps.apple.com/?address=1044+Liberty+Park+Dr,+Austin,+TX+78746",
         "label": "Location",
         "dataDetectorTypes": "PKDataDetectorTypeAddress",
         "changeMessage": "Location changed to %@"
