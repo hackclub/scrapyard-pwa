@@ -90,7 +90,8 @@ export default function Scan() {
           ) {
             setAttendee(await api.irl.getAttendee.post({ ticketNumber }));
             window.checkedIn.push(ticketNumber);
-            audioSuccess.play();
+            audioSuccess.play().catch(console.log);
+
             setTicketNumber("");
             setData("");
             next();
@@ -116,6 +117,7 @@ export default function Scan() {
       const { messages } = await api.irl.receive.get();
 
       for (const message of messages) {
+        if (!("name" in message)) continue;
         if (
           message.name.startsWith("scan:") ||
           window.acked.includes(message.id) ||
@@ -144,15 +146,17 @@ export default function Scan() {
         setTicketNumber(number);
         next();
         setAttendee(null);
-        audioScan.play();
-        api.irl.transmit
-          .post({
-            name: "scan:ticket.scan",
-            data: {
-              ticketNumber: number
-            }
-          })
-          .then(console.log);
+        audioScan.play().catch(console.log);
+        doCheckIn(number).then(() => {
+          api.irl.transmit
+            .post({
+              name: "scan:ticket.scan",
+              data: {
+                ticketNumber: number
+              }
+            })
+            .then(console.log);
+        });
       }
     } catch (e) {}
   }, [data, state]);
