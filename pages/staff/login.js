@@ -187,7 +187,7 @@ export const getServerSideProps = async ({ req, res }) => {
   if (session.authorized && (await session.currentUser())) {
     return {
       redirect: {
-        destination: "/organizers",
+        destination: "/",
         permanent: false
       }
     };
