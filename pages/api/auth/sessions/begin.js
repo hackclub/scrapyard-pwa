@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     if (!organizer) return res.json({ registered: false });
 
     email = organizer.fields.email;
-    name = organizer.fields.firstName;
+    name = organizer.fields.ticketing_firstName;
   } else {
     const attendee = await findAttendee(req.body.email);
 
