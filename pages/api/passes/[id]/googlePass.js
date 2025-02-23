@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 import { findAttendeeByPassId } from "@/lib/airtable";
-import { generateApplePass } from "@/lib/applePass";
+import { generateGoogleJWT } from "@/lib/googlePass";
 
 export default async function handler(req, res) {
   const { id } = req.query;
@@ -12,7 +12,6 @@ export default async function handler(req, res) {
     return res.send("Error, invalid link");
   }
 
-  res.setHeader("Content-Type", "application/vnd.apple.pkpass");
-
-  res.send(await generateApplePass({ user }));
+  const jwt = await generateGoogleJWT({ user });
+  res.redirect(303, `https://pay.google.com/gp/v/save/${jwt}`);
 }
