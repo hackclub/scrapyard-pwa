@@ -101,9 +101,17 @@ export default function Login({
         </div>
         <img
           src="/favicon.png"
-          style={{
-            width: "50vmin"
-          }}
+          {...$({
+            width: "50vmin",
+            ...(limitedAnimations
+              ? {}
+              : {
+                  animate$fadeIn: {
+                    args: ["fromBottom"],
+                    delay: "0.5s"
+                  }
+                })
+          })}
         />
       </aside>
     </main>
