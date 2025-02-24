@@ -79,9 +79,7 @@ export default function Login({
           </h3>
         </Link> */}
         <Link href="/dashboard" style={{ textDecoration: "none" }}>
-          <h3 {...$({ color: "#fff", textDecoration: "none" })}>
-            Dashboard
-          </h3>
+          <h3 {...$({ color: "#fff", textDecoration: "none" })}>Dashboard</h3>
         </Link>
         <Link href="/schedule" style={{ textDecoration: "none" }}>
           <h3 {...$({ color: "#fff", textDecoration: "none" })}>Schedule</h3>
@@ -105,7 +103,7 @@ export default function Login({
           color: "var(--red)",
           ...(red
             ? {
-              background: `url("https://scrapyard.hackclub.com/backgrounds/cutting-mat.png") left center / cover no-repeat`,
+                background: `url("https://scrapyard.hackclub.com/backgrounds/cutting-mat.png") left center / cover no-repeat`,
                 color: "var(--tan)"
               }
             : {})
@@ -118,8 +116,7 @@ export default function Login({
             margin: "0 auto",
             paddingTop: "48px",
             paddingBottom: "24px",
-            width: "100%",
-            
+            width: "100%"
           }}
         >
           {children}
