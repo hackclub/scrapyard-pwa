@@ -30,7 +30,7 @@ export default function Login({
           justifyContent: "center",
           alignItems: "start",
           width: ["100vw", "400px", "min(40vw, 600px)"],
-          background: "var(--tan)",
+          background: "url('https://scrapyard.hackclub.com/backgrounds/ripped-paper.png')",
           color: "var(--red)",
           padding: ["40px 24px", "24px"]
         })}
@@ -40,17 +40,17 @@ export default function Login({
 
       <aside
         {...$({
-          border: "6px solid var(--tan)",
+          // border: "6px solid var(--tan)",
           flexGrow: "1",
           display: "flex",
           flexDirection: "column",
           justifyContent: "start",
           alignItems: "center",
           height: "100vh",
-          // background: `url("https://cloud-7ppjvjso3-hack-club-bot.vercel.app/0frame.svg")`,
-          backgroundPosition: "bottom",
+          background: `url("https://scrapyard.hackclub.com/backgrounds/cutting-mat.png")`,
+          backgroundPosition: "left",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "contain"
+          backgroundSize: "cover"
         })}
       >
         <div

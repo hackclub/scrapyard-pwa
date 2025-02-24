@@ -115,7 +115,7 @@ export default function LoginPage() {
                   transition: 0.1s;
                 }
                 .inputFocus:placeholder-shown {
-                  font-family: 'Akaya Kanadaka';
+                  font-family: 'Instrument Sans';
                 }
                 .inputFocus:focus::placeholder {
                   color: black;
@@ -132,6 +132,7 @@ export default function LoginPage() {
             Login
           </span>{" "}
           {/* font loader */}
+          <input style={{ display: "none", fontFamily: "Space Mono" }} />
           <input
             {...$.inputFocus({
               padding: "8px",
