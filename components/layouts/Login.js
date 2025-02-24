@@ -79,7 +79,7 @@ export default function Login({
             })}
             src={
               staff
-                ? "https://icons.hackclub.com/api/icons/0x337D78/clubs-fill"
+                ? "https://icons.hackclub.com/api/icons/0xffffff/clubs-fill"
                 : "https://assets.hackclub.com/flag-standalone.svg"
             }
             onClick={onFlagClick}
