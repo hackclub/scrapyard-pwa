@@ -30,7 +30,8 @@ export default function Login({
           justifyContent: "center",
           alignItems: "start",
           width: ["100vw", "400px", "min(40vw, 600px)"],
-          background: "url('https://scrapyard.hackclub.com/backgrounds/ripped-paper.png')",
+          background:
+            "url('https://scrapyard.hackclub.com/backgrounds/ripped-paper.png')",
           color: "var(--red)",
           padding: ["40px 24px", "24px"]
         })}
@@ -98,6 +99,12 @@ export default function Login({
             {staff ? "Scrapyard Organizers" : "Scrapyard"}
           </h1>
         </div>
+        <img
+          src="/favicon.png"
+          style={{
+            width: "50vmin"
+          }}
+        />
       </aside>
     </main>
   );
