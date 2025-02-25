@@ -12,6 +12,10 @@ export default async function handler(req, res) {
     return res.send("Error, invalid link");
   }
 
+  if (!user.fields.ticketing_ticketNumber) {
+    await generateTicket(user);
+  }
+
   res.setHeader("Content-Type", "application/vnd.apple.pkpass");
 
   res.send(await generateApplePass({ user }));
