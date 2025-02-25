@@ -79,23 +79,23 @@ export default function Login({
           </h3>
         </Link> */}
         <Link href="/dashboard" style={{ textDecoration: "none" }}>
-          <h3 {...$({ color: "#337D78", textDecoration: "none" })}>
+          <h3 {...$({ color: "#fff", textDecoration: "none" })}>
             Dashboard
           </h3>
         </Link>
         <Link href="/schedule" style={{ textDecoration: "none" }}>
-          <h3 {...$({ color: "#337D78", textDecoration: "none" })}>Schedule</h3>
+          <h3 {...$({ color: "#fff", textDecoration: "none" })}>Schedule</h3>
         </Link>
         <a
           href="/"
-          {...$({ color: "#337D78", textDecoration: "none" })}
+          {...$({ color: "#fff", textDecoration: "none" })}
           onClick={async (e) => {
             e.preventDefault();
             await api.auth.sessions.destroy.post();
             router.push("/");
           }}
         >
-          <h3 {...$({ color: "#337D78", textDecoration: "none" })}>Sign Out</h3>
+          <h3 {...$({ color: "#fff", textDecoration: "none" })}>Sign Out</h3>
         </a>
       </nav>
       <div
@@ -105,7 +105,7 @@ export default function Login({
           color: "var(--red)",
           ...(red
             ? {
-                background: "var(--red)",
+              background: `url("https://scrapyard.hackclub.com/backgrounds/cutting-mat.png") left center / cover no-repeat`,
                 color: "var(--tan)"
               }
             : {})
@@ -118,7 +118,8 @@ export default function Login({
             margin: "0 auto",
             paddingTop: "48px",
             paddingBottom: "24px",
-            width: "100%"
+            width: "100%",
+            
           }}
         >
           {children}

@@ -28,7 +28,8 @@ function LightenDarkenColor(col, amt) {
 }
 
 const Block = styled(Box)`
-  background-color: var(--red);
+  background-color: ${(props => props.muted ? "#ddd" : "var(--red)")};
+  ${(props => props.muted ? "color: #444;" : "")};
   border-radius: ${theme.radius};
   position: absolute;
   left: 4em;
@@ -90,7 +91,7 @@ class EventCard extends Component {
 
   render() {
     const { active } = this.state;
-    const { name, subtitle, start, end, summary, flavor } = this.props.event;
+    const { name, subtitle, start, end, summary, flavor, muted } = this.props.event;
     return (
       <>
         {active && (
@@ -108,6 +109,7 @@ class EventCard extends Component {
           start={start}
           end={end}
           flavor={flavor}
+          muted={muted}
           onClick={typeof summary === "undefined" ? null : this.toggle}
         >
           <Text.span bold>{name}</Text.span>

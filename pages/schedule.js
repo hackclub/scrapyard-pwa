@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Main from "@/components/layouts/Main";
 import useDevMode from "@/utils/useDevMode";
 import Schedule from "@/components/schedule/Schedule";
+import $ from "@/utils/animation";
 
 export default function Dashboard({}) {
   const [loading, setLoading] = useState(false);
@@ -12,7 +13,20 @@ export default function Dashboard({}) {
 
   return (
     <Main pageName="Schedule" red>
-      <Schedule />
+      {/* <Schedule /> */}
+                <h1
+                  {...$({
+                    marginBottom: "16px",
+                    animate$fadeIn: {
+                      duration: "0.5s",
+                      delay: "0s",
+                      args: ["fromBottom"]
+                    }
+                  })}
+                >
+                  Schedule is coming soon!
+                </h1>
+      
     </Main>
   );
 }

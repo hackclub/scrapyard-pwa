@@ -1105,6 +1105,10 @@ button:active {
   scrollbar-color: #337d78 #ffffff;
 }
 
+.nicescrollbar.ns2 {
+  scrollbar-color: #ffffffff #ffffff00
+}
+
 /* Chrome, Edge, and Safari */
 .nicescrollbar::-webkit-scrollbar {
   width: 16px;

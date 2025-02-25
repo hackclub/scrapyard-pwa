@@ -85,7 +85,8 @@ export default function Dashboard({ user }) {
                 style={{
                   height: "62px",
                   borderRadius: "12px",
-                  color: "white"
+                  color: "#337D78",
+                  fontWeight: "bold",
                 }}
               >
                 Download Ticket

@@ -8,76 +8,47 @@
 const schedule = [
   {
     day: {
-      short: "Friday",
-      long: "Friday",
-      number: 9,
-      date: "February 9th"
+      short: "Saturday",
+      long: "Saturday",
+      number: 1,
+      date: "March 1st"
     },
     events: [
+      // {
+      //   name: "✈️ Transportation Available from AUS",
+      //   start: "9:30 am",
+      //   end: "10:00 am",
+      //   muted: true
+      // },
+      // {
+      //   name: "Doors Open",
+      //   start: "10:30 am",
+      //   end: "12:00 pm"
+      // },
       {
-        name: "Enter A New World",
-        start: "6:00 pm",
-        end: "7:00 pm"
+        name: "Opening Ceremony / Lunch",
+        start: "12:00 pm",
+        end: "1:30 pm"
       },
       {
-        name: "Dine",
-        start: "7:15 pm",
+        name: "Workshops 1",
+        start: "3:30 pm",
+        end: "4:30 pm"
+      },
+      {
+        name: "Workshops 2",
+        start: "5:00 pm",
+        end: "6:00 pm"
+      },
+      {
+        name: "Dinner / Lightning Talks",
+        start: "6:30 pm",
         end: "8:00 pm"
       },
       {
-        name: "Challenge",
-        start: "10:00 pm",
-        end: "12:00 am"
-      }
-    ]
-  },
-  {
-    day: {
-      short: "Saturday",
-      long: "Saturday",
-      number: 10,
-      date: "February 10th"
-    },
-    events: [
-      {
-        name: "Sweet Treat",
-        start: "12:00 am",
-        end: "12:30 am"
-      },
-      {
-        name: "Sunrise Escapade ",
-        start: "6:00 am",
-        end: "8:30 am"
-      },
-      {
-        name: "Scavenge",
-        start: "11:00 am",
-        end: "12:30 pm"
-      },
-      {
-        name: "Workshops",
-        start: "1:00 pm",
-        end: "2:00 pm"
-      },
-      {
-        name: "Gadget Appears",
-        start: "3:00 pm",
-        end: "4:00 pm"
-      },
-      {
-        name: "Workshops",
-        start: "4:00 pm",
-        end: "7:00 pm"
-      },
-      {
-        name: "New Year Dinner",
-        start: "7:00 pm",
-        end: "9:00 pm"
-      },
-      {
-        name: "Sing",
-        start: "11:00 pm",
-        end: "12:00 am"
+        name: "???",
+        start: "11:59 pm",
+        end: "1:00 am"
       }
     ]
   },
@@ -85,40 +56,36 @@ const schedule = [
     day: {
       short: "Sunday",
       long: "Sunday",
-      number: 11,
-      date: "February 11th"
+      number: 2,
+      date: "March 2nd"
     },
     events: [
-      {
-        name: "Sing",
-        start: "12:00 am",
-        end: "2:00 am"
-      },
       {
         name: "Breakfast",
         start: "8:30 am",
         end: "10:00 am"
       },
       {
-        name: "Workshops",
-        start: "10:30 am",
-        end: "11:30 am"
-      },
-      {
-        name: "Picnic",
+        name: "Lunch",
         start: "12:00 pm",
-        end: "1:30 pm"
+        end: "1:00 pm"
       },
       {
-        name: "Setup Booths",
+        name: "Demos",
+        start: "1:00 pm",
+        end: "2:00 pm"
+      },
+      {
+        name: "Closing Ceremony",
         start: "2:00 pm",
-        end: "2:30 pm"
+        end: "3:00 pm"
       },
-      {
-        name: "Demos + Closing",
-        start: "4:00 pm",
-        end: "6:00 pm"
-      }
+      // {
+      //   name: "✈️ Transportation Available to AUS",
+      //   start: "3:30 pm",
+      //   end: "10:00 pm",
+      //   muted: true
+      // }
     ]
   }
 ];

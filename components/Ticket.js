@@ -31,7 +31,7 @@ export function PreloadTicket({ user }) {
       style={{ width: "1px", height: "1px", opacity: 0, overflow: "hidden" }}
     >
       <img
-        src={`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(`https://hack.af/${data._ticketNumber}`)}&ecc=M&color=ffffff&bgcolor=337D78&format=svg`}
+        src={`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(`https://hack.af/${data._ticketNumber}`)}&ecc=M&color=337D78&bgcolor=ffffff&format=svg`}
         height="120px"
       />
       <img src="https://scrapyard.hackclub.com/favicon.png" height="50px" />
@@ -48,9 +48,11 @@ export default function Ticket({ user }) {
     }
   });
 
+  console.log(user.fields, "A");
+
   return (
     <div
-      className="nicescrollbar"
+      className="nicescrollbar ns2"
       style={{
         width: "100vw",
         maxWidth: "100vw",
@@ -143,13 +145,13 @@ export default function Ticket({ user }) {
                 <div className="flex" style={{ flexDirection: "column" }}>
                   <span>Travel</span>
                   <span style={{ fontSize: "1.4em" }}>
-                    {"Magic" || data.transportMethod}
+                    {"Unknown" || data.transportMethod}
                   </span>
                 </div>
                 <div className="flex" style={{ flexDirection: "column" }}>
-                  <span>Dietary Restrictions</span>
+                  <span>Attributes</span>
                   <span style={{ fontSize: "1.4em" }}>
-                    {data._shortDietaryRestrictions}
+                    {user.fields.attributes || "N"}
                   </span>
                 </div>
               </div>
@@ -173,7 +175,7 @@ export default function Ticket({ user }) {
                 style={{ alignItems: "center", gap: "26px" }}
               >
                 <img
-                  src={`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(`https://hack.af/${data._ticketNumber}`)}&ecc=M&color=ffffff&bgcolor=337D78&format=svg`}
+                  src={`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(`https://hack.af/${data._ticketNumber}`)}&ecc=M&color=337D78&bgcolor=ffffff&format=svg`}
                   height="120px"
                 />
                 <img
@@ -199,20 +201,6 @@ export default function Ticket({ user }) {
                 className="flex"
                 style={{ alignItems: "center", gap: "8px" }}
               >
-                <div>Dietary Restrictions</div>
-                <div
-                  style={{
-                    flexGrow: "1",
-                    height: "0.5px",
-                    border: "0.5px solid var(--red)"
-                  }}
-                />
-                <div>{user.fields.tickets_shortDietaryRestrictions}</div>
-              </div>
-              <div
-                className="flex"
-                style={{ alignItems: "center", gap: "8px" }}
-              >
                 <div>Travel</div>
                 <div
                   style={{
@@ -221,7 +209,7 @@ export default function Ticket({ user }) {
                     border: "0.5px solid var(--red)"
                   }}
                 />
-                <div>{"Magic" || data.transportMethod}</div>
+                <div>{"Unknown" || data.transportMethod}</div>
               </div>
               <div
                 className="flex"
@@ -236,6 +224,20 @@ export default function Ticket({ user }) {
                   }}
                 />
                 <div>{user.fields.travelingFrom}</div>
+              </div>
+              <div
+                className="flex"
+                style={{ alignItems: "center", gap: "8px" }}
+              >
+                <div>Attributes</div>
+                <div
+                  style={{
+                    flexGrow: "1",
+                    height: "0.5px",
+                    border: "0.5px solid var(--red)"
+                  }}
+                />
+                <div>{user.fields.attributes || "N"}</div>
               </div>
             </div>
           </div>

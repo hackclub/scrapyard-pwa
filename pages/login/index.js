@@ -132,7 +132,16 @@ export default function LoginPage() {
             Login
           </span>{" "}
           {/* font loader */}
-          <input style={{ display: "none", fontFamily: "Space Mono" }} />
+          <input style={{ fontFamily: "Space Mono",
+            position: "absolute",
+            opacity: "0",
+            pointerEvents: "none",
+            zIndex: "-1",
+            width: "0",
+            height: "0",
+            top: "0",
+            left: "0",
+           }} />
           <input
             {...$.inputFocus({
               padding: "8px",
