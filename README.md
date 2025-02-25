@@ -1,4 +1,4 @@
-# Scrapyard PWA
+# Scrapyard Ticketing
 
 This is a Next.js web app that: collects additional information from participants, generates tickets, and has a schedule for participants to reference.
 
