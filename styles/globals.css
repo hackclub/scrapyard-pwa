@@ -1106,7 +1106,7 @@ button:active {
 }
 
 .nicescrollbar.ns2 {
-  scrollbar-color: #ffffffff #ffffff00
+  scrollbar-color: #ffffffff #ffffff00;
 }
 
 /* Chrome, Edge, and Safari */
@@ -1121,4 +1121,12 @@ button:active {
 .nicescrollbar::-webkit-scrollbar-thumb {
   background-color: #337d78;
   border-radius: 10px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #296661;
+}
+
+td {
+  padding: 5px;
 }

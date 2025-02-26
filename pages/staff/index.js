@@ -38,6 +38,19 @@ export default function Dashboard({ admin }) {
           </Link>
           <p>Open the organizer console for processing tickets</p>
         </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            gap: "16px"
+          }}
+        >
+          <Link href="/staff/flights">
+            <button>Open Flight Board</button>
+          </Link>
+          <p>Open the map and table to view upcoming attendee flights</p>
+        </div>
       </div>
     </Main>
   );
