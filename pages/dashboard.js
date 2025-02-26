@@ -37,7 +37,8 @@ export default function Dashboard({ user }) {
               flexDirection: "row",
               alignItems: "start",
               justifyContent: "start",
-              gap: "16px"
+              gap: "16px",
+              flexWrap: "wrap"
             }}
           >
             <Link
