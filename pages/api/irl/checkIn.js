@@ -9,6 +9,13 @@ export default async function handler(req, res) {
 
   try {
     const attendee = await findAttendeeByNumber(req.body.ticketNumber);
+
+    if (attendee.fields.ticketing_waiverStatus !== "signed") {
+      return res.json({
+        success: false
+      });
+    }
+
     updateAttendeeById(attendee.id, { ticketing_checkedIn: true });
 
     return res.json({
