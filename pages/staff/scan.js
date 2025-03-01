@@ -312,7 +312,13 @@ export default function Scan() {
             }}
           >
             <h1>You're all set, {attendee.fields.first_name}!</h1>
-            <Ticket user={attendee} />
+            <div
+              style={{
+                transform: "scale(0.8)"
+              }}
+            >
+              <Ticket user={attendee} />
+            </div>
           </div>
         </div>
       )}
