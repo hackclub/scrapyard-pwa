@@ -138,6 +138,7 @@ export default function Scan() {
   useEffect(() => {
     try {
       const number = data.split("/").reverse()[0];
+      console.log(state);
       if (
         number.length == 13 &&
         state == "scan" &&
@@ -162,7 +163,6 @@ export default function Scan() {
   const handleScanResult = (result, error) => {
     if (result) {
       console.log("result", result.text);
-      console.log("a");
       setData(result.text);
     }
   };
