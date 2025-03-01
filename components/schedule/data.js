@@ -1,10 +1,3 @@
-// const people = {
-//   'jordan': {
-//     name: 'Jordan Arnesen',
-//     title: ' Curriculum Engineer'
-//   },
-//   ''
-// }
 const schedule = [
   {
     day: {
@@ -14,36 +7,41 @@ const schedule = [
       date: "March 1st"
     },
     events: [
-      // {
-      //   name: "✈️ Transportation Available from AUS",
-      //   start: "9:30 am",
-      //   end: "10:00 am",
-      //   muted: true
-      // },
-      // {
-      //   name: "Doors Open",
-      //   start: "10:30 am",
-      //   end: "12:00 pm"
-      // },
       {
-        name: "Opening Ceremony / Lunch",
+        name: "✈️ Transportation Available from AUS",
+        start: "8:00 am",
+        end: "11:00 am",
+        muted: true
+      },
+      {
+        name: "Doors Open",
+        start: "11:00 am",
+        end: "12:00 pm"
+      },
+      {
+        name: "Opening Ceremony",
         start: "12:00 pm",
+        end: "12:30 pm"
+      },
+      {
+        name: "Lunch",
+        start: "12:30 pm",
         end: "1:30 pm"
       },
       {
         name: "Workshops 1",
-        start: "3:30 pm",
-        end: "4:30 pm"
-      },
-      {
-        name: "Workshops 2",
-        start: "5:00 pm",
-        end: "6:00 pm"
+        start: "2:00 pm",
+        end: "3:00 pm"
       },
       {
         name: "Dinner / Lightning Talks",
-        start: "6:30 pm",
+        start: "7:00 pm",
         end: "8:00 pm"
+      },
+      {
+        name: "Workshops 2",
+        start: "9:00 pm",
+        end: "10:00 pm"
       },
       {
         name: "???",
@@ -62,31 +60,32 @@ const schedule = [
     events: [
       {
         name: "Breakfast",
-        start: "8:30 am",
-        end: "10:00 am"
+        start: "7:00 am",
+        end: "9:00 am"
       },
       {
         name: "Lunch",
-        start: "12:00 pm",
-        end: "1:00 pm"
+        start: "12:30 pm",
+        end: "1:30 pm"
       },
       {
         name: "Demos",
-        start: "1:00 pm",
-        end: "2:00 pm"
+        start: "1:30 pm",
+        end: "2:30 pm"
       },
       {
         name: "Closing Ceremony",
-        start: "2:00 pm",
+        start: "2:30 pm",
         end: "3:00 pm"
       },
-      // {
-      //   name: "✈️ Transportation Available to AUS",
-      //   start: "3:30 pm",
-      //   end: "10:00 pm",
-      //   muted: true
-      // }
+      {
+        name: "✈️ Transportation Available to AUS",
+        start: "3:00 pm",
+        end: "10:00 pm",
+        muted: true
+      }
     ]
   }
 ];
+
 export default schedule;

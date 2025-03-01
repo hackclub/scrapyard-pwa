@@ -11,7 +11,7 @@ const Base = styled(Box).attrs({ px: [2, 4], pb: [4, 5] })`
   grid-gap: ${theme.space[3]}px;
   ${theme.mediaQueries.lg} {
     grid-gap: ${theme.space[4]}px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 

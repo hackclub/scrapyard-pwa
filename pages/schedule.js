@@ -7,26 +7,9 @@ import Schedule from "@/components/schedule/Schedule";
 import $ from "@/utils/animation";
 
 export default function Dashboard({}) {
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
-  const dev = useDevMode();
-
   return (
     <Main pageName="Schedule" red>
-      {/* <Schedule /> */}
-                <h1
-                  {...$({
-                    marginBottom: "16px",
-                    animate$fadeIn: {
-                      duration: "0.5s",
-                      delay: "0s",
-                      args: ["fromBottom"]
-                    }
-                  })}
-                >
-                  Schedule is coming soon!
-                </h1>
-      
+      <Schedule />
     </Main>
   );
 }
