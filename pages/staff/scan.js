@@ -162,6 +162,7 @@ export default function Scan() {
   const handleScanResult = (result, error) => {
     if (result) {
       console.log("result", result.text);
+      console.log("a");
       setData(result.text);
     }
   };
