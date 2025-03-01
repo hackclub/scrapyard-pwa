@@ -101,7 +101,7 @@ export default function Dashboard({ admin }) {
         {scans.reverse().map((scan) => {
           const attendee = attendees[scan.ticketNumber];
           const fields = attendee?.fields || {};
-          const ticketed = checkedIn;
+          const ticketed = checkedIn.includes(scan.ticketNumber);
 
           return (
             <div
