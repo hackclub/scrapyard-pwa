@@ -147,16 +147,14 @@ export default function Scan() {
         // next();
         setAttendee(null);
         audioScan.play().catch(console.log);
-        doCheckIn(number).then(() => {
-          api.irl.transmit
-            .post({
-              name: "scan:ticket.scan",
-              data: {
-                ticketNumber: number
-              }
-            })
-            .then(console.log);
-        });
+        api.irl.transmit
+          .post({
+            name: "scan:ticket.scan",
+            data: {
+              ticketNumber: number
+            }
+          })
+          .then(console.log);
       }
     } catch (e) {}
   }, [data, state]);
