@@ -67,7 +67,7 @@ export default function Dashboard({ admin }) {
     const interval = setInterval(async () => {
       const { messages } = await api.irl.receive.get();
 
-      console.log(messages, "msgs")
+      console.log(messages, "msgs");
 
       for (const message of messages) {
         if (
@@ -80,7 +80,6 @@ export default function Dashboard({ admin }) {
         console.log(window.acked, message.id);
         setMessages((c) => [...c, message]);
         window.acked.push(message.id);
-
 
         newMessage(message);
       }
@@ -102,7 +101,7 @@ export default function Dashboard({ admin }) {
         {scans.reverse().map((scan) => {
           const attendee = attendees[scan.ticketNumber];
           const fields = attendee?.fields || {};
-          const ticketed = true;
+          const ticketed = checkedIn;
 
           return (
             <div
