@@ -67,9 +67,11 @@ export default function Dashboard({ admin }) {
     const interval = setInterval(async () => {
       const { messages } = await api.irl.receive.get();
 
+      console.log(messages, "msgs")
+
       for (const message of messages) {
         if (
-          message.name.startsWith("staff:") ||
+          (message.name || "").startsWith("staff:") ||
           window.acked.includes(message.id) ||
           message.timestamp < window.sticketingLoadedAt
         )
@@ -79,6 +81,7 @@ export default function Dashboard({ admin }) {
         setMessages((c) => [...c, message]);
         window.acked.push(message.id);
 
+
         newMessage(message);
       }
     }, 1000);
@@ -86,7 +89,7 @@ export default function Dashboard({ admin }) {
   }, []);
 
   return (
-    <Main pageName="Dashboard" red>
+    <Main pageName="Dashboard" red admin>
       <h1>Check In Console</h1>
 
       <div

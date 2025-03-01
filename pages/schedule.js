@@ -6,9 +6,13 @@ import useDevMode from "@/utils/useDevMode";
 import Schedule from "@/components/schedule/Schedule";
 import $ from "@/utils/animation";
 
-export default function Dashboard({}) {
+export default function Dashboard({ admin }) {
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+  const dev = useDevMode();
+
   return (
-    <Main pageName="Schedule" red>
+    <Main pageName="Schedule" red admin={admin}>
       <Schedule />
     </Main>
   );
@@ -30,6 +34,7 @@ export const getServerSideProps = async ({ req, res }) => {
   return {
     props: {
       // user
+      admin: session.organizer
     }
   };
 };

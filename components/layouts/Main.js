@@ -13,6 +13,7 @@ export default function Login({
   pageName,
   children,
   limitedAnimations = false,
+  admin = false,
   red = false
 }) {
   const router = useRouter();
@@ -81,6 +82,9 @@ export default function Login({
         <Link href="/dashboard" style={{ textDecoration: "none" }}>
           <h3 {...$({ color: "#fff", textDecoration: "none" })}>Dashboard</h3>
         </Link>
+        {admin && <Link href="/staff/process" style={{ textDecoration: "none" }}>
+          <h3 {...$({ color: "#fff", textDecoration: "none" })}>Console (Staff Only)</h3>
+        </Link>}
         <Link href="/schedule" style={{ textDecoration: "none" }}>
           <h3 {...$({ color: "#fff", textDecoration: "none" })}>Schedule</h3>
         </Link>

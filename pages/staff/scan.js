@@ -144,7 +144,7 @@ export default function Scan() {
         !window.checkedIn.includes(number)
       ) {
         setTicketNumber(number);
-        next();
+        // next();
         setAttendee(null);
         audioScan.play().catch(console.log);
         doCheckIn(number).then(() => {

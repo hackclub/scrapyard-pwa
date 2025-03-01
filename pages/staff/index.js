@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Dashboard({ admin }) {
   return (
-    <Main pageName="Dashboard" red>
+    <Main pageName="Dashboard" red admin>
       <div
         style={{
           display: "flex",
